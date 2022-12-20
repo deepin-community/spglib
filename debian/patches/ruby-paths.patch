@@ -1,0 +1,13 @@
+Description: Specifying the location of headers and shared library for Ruby.
+Author: Andrius Merkys <merkys@debian.org>
+--- a/ruby/extconf.rb
++++ b/ruby/extconf.rb
+@@ -2,7 +2,7 @@
+ 
+ require 'mkmf'
+ extension_name = 'getspg'
+-dir_config(extension_name)
++dir_config(extension_name, '$(ABS_TOP_DESTDIR)')
+ 
+ if have_header('spglib.h') and have_library('symspg')
+ 	create_makefile(extension_name)

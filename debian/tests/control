@@ -1,0 +1,5 @@
+Tests: python3-tests
+Depends:
+ python3-nose,
+ python3-yaml (>= 5),
+ @,
